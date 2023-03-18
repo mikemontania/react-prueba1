@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import Image from '../logo.svg';
+import { Configuracion, Home, Usuarios } from '../Paginas';
 
 const Navigation = () => {
     return (
@@ -21,9 +22,9 @@ const Navigation = () => {
                 </nav>
 
                 <Routes>
-                    <Route path='/' element={<h1>HOME</h1>} />
-                    <Route path='/usuarios' element={<h1>HOME</h1>} />
-                    <Route path='/configuracion' element={<h1>HOME</h1>} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/usuarios' element={<Usuarios />} />
+                    <Route path='/configuracion' element={<Configuracion />} />
 
                     <Route path='/*' element={<Navigate to={'/'} replace />} />
                 </Routes>
